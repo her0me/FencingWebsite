@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <link rel="stylesheet" href="master.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+  <link rel="icon" href="face.svg">
+  <!--Changes theme color-->
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.light_blue-red.min.css"/>
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    var i = 0;
+
+    $(document).ready(function (e) {
+
+      $( "#header" ).load( "header.html", function(){
+        var $header = $( this );
+        for (i = 0; i < $header.length;i++){
+          $header[i].getElementsByClassName("refs")[0].className = $header[i].getElementsByClassName("refs")[0].className + " is-active";
+        }
+      });
+
+      $( "#footer" ).load( "footer.html" );
+      $( "#drawer" ).load( "drawer.html" );
+    });
+  </script>
+  <head>
+    <meta charset="utf-8">
+    <title>Michigan Division Fencing</title>
+  </head>
+  <body>
+
+    <div class="mdl-layout mdl-js-layout mdl-layout--no-desktop-drawer-button">
+      <!--header-->
+      <header id="header"></header>
+      <main class="mdl-layout__content">
+
+        <div class="page-content">
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col mdl-typography--text-center mdl-cell--4-offset">
+              <h2><a href="http://www.askfred.net" target="new" class="reference-link">AskFRED</a></h2>
+              <h5>AskFRED is the Fencing Results and Events Database (FRED). This website will provide you with information about fencing tournaments across the USA. You can access AskFred <a href="http://www.askfred.net" target="new" class="reference-link">here</a> or click the title.</h5>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col mdl-typography--text-center mdl-cell--4-offset">
+              <h2><a href="https://www.usafencing.org/" target="new" class="reference-link">USA Fencing</a></h2>
+              <h5>You can access the USA Fencing website <a href="https://www.usafencing.org/" target="new" class="reference-link">here</a> or click the title.</h5>
+            </div>
+          </div>
+        </div>
+
+      </main>
+      <!--footer-->
+      <footer id="footer"></footer>
+      <!--drawer-->
+      <div class="mdl-layout__drawer" id="drawer"></div>
+    </div>
+  </body>
+</html>

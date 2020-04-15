@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<link rel="stylesheet" href="master.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+<link rel="icon" href="face.svg">
+<!--Changes theme color-->
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.light_blue-red.min.css"/>
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="master.js"></script>
+<script>
+  var i = 0;
+
+  $(document).ready(function (e) {
+
+    $( "#header" ).load( "header.html", function(){
+      var $header = $( this );
+      for (i = 0; i < $header.length;i++){
+        $header[i].getElementsByClassName("home")[0].className = $header[i].getElementsByClassName("home")[0].className + " is-active";
+      }
+    });
+
+    $( "#footer" ).load( "footer.html" );
+    $( "#drawer" ).load( "drawer.html" );
+  });
+</script>
+  <head>
+    <meta charset="utf-8">
+    <title>Michigan Division Fencing</title>
+  </head>
+  <body>
+
+    <div class="mdl-layout mdl-js-layout mdl-layout--no-desktop-drawer-button">
+      <!--header-->
+      <header id="header"></header>
+
+      <main class="mdl-layout__content">
+
+        <!--Home Tab-->
+        <div class="page-content">
+            <div class="mdl-grid">
+              <!--div class="mdl-cell mdl-cell--4-col"></div-->
+              <div class="mdl-cell mdl-cell--12-col">
+                <img src="assets/fencing_banner_high-res.jpg" class="USAF-logo" id="USAF-logo">
+              </div>
+              <!--div class="mdl-cell mdl-cell--4-col"></div-->
+
+              <div class="welcome-message mdl-cell mdl-cell--12-col">
+                <h2></h2>
+              </div>
+
+              <div class="mdl-cell mdl-cell--2-col"></div>
+              <div class="mdl-cell mdl-cell--8-col">
+                <h3>What is Fencing?</h3>
+                <p>Many fencers have heard the cliché "fencing is chess at a hundred miles an hour," but its true. Fencing is a sport that exercises you mentally and physically at a fast pace. You are competing against yourself and your opponent to better yourself and enjoy doing it.</p>
+              </div>
+              <div class="mdl-cell mdl-cell--2-col"></div>
+
+              <div class="mdl-cell mdl-cell--4-col"></div>
+              <div class="mdl-cell mdl-cell--4-col">
+                <h3>Division Officers</h3>
+                <ul class="mdl-list">
+                  <li class="mdl-list__item mdl-list__item--three-line">
+                    <span class="mdl-list__item-primary-content">
+                      <i class="material-icons mdl-list__item-avatar">person</i>
+                      <span>Scott Green</span>
+                      <span class="mdl-list__item-text-body">
+                        Chair
+                      </span>
+                    </span>
+                    <span class="mdl-list__item-secondary-content">
+                      <a class="mdl-list__item-secondary-action" href="mailto:daytonaman4492@gmail.com"><i class="material-icons">email</i></a>
+                    </span>
+                  </li>
+                  <li class="mdl-list__item mdl-list__item--three-line">
+                    <span class="mdl-list__item-primary-content">
+                      <i class="material-icons  mdl-list__item-avatar">person</i>
+                      <span>Jay Kelbey</span>
+                      <span class="mdl-list__item-text-body">
+                        Vice-Chair
+                      </span>
+                    </span>
+                    <span class="mdl-list__item-secondary-content">
+                      <a class="mdl-list__item-secondary-action" href="mailto:jay@kelbley.com"><i class="material-icons">email</i></a>
+                    </span>
+                  </li>
+                  <li class="mdl-list__item mdl-list__item--three-line">
+                    <span class="mdl-list__item-primary-content">
+                      <i class="material-icons  mdl-list__item-avatar">person</i>
+                      <span>Carrie Owens</span>
+                      <span class="mdl-list__item-text-body">
+                        Secretary
+                      </span>
+                    </span>
+                    <span class="mdl-list__item-secondary-content">
+                      <a class="mdl-list__item-secondary-action" href="mailto:jandcowens@charter.net"><i class="material-icons">email</i></a>
+                    </span>
+                  </li>
+                  <li class="mdl-list__item mdl-list__item--three-line">
+                    <span class="mdl-list__item-primary-content">
+                      <i class="material-icons  mdl-list__item-avatar">person</i>
+                      <span>Liz Kocab</span>
+                      <span class="mdl-list__item-text-body">
+                        Treasurer
+                      </span>
+                    </span>
+                    <span class="mdl-list__item-secondary-content">
+                      <a class="mdl-list__item-secondary-action" href="mailto:erkocab@aol.com"><i class="material-icons">email</i></a>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+              <div class="mdl-cell mdl-cell--4-col"></div>
+            </div>
+        </div>
+
+      </main>
+      <!--footer-->
+      <footer id="footer"></footer>
+
+      <!--drawer-->
+      <div class="mdl-layout__drawer" id="drawer"></div>
+    </div>
+  </body>
+</html>
