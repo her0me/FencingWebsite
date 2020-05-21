@@ -97,6 +97,6 @@
 }
 
 .icon-link {
-  text-decoration-color: inherit;
-  text-decoration-style: none;
+  color: white;
+  text-decoration-color: white;
 }
