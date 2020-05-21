@@ -95,3 +95,8 @@
 .copyright{
   padding-left: 100px;
 }
+
+.icon-link {
+  text-decoration-color: inherit;
+  text-decoration-style: none;
+}
